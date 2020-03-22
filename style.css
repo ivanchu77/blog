@@ -16,12 +16,10 @@ body {
 	-webkit-font-smoothing : antialiased;
 }
 
-
-
 .casual-bgvid {
 	min-height : 100%;
 	background-color: black;
-    opacity: 1;
+    opacity: 0.13;
 	position         : fixed;
 	top              : 0;
 	left             : 50%;
@@ -45,7 +43,7 @@ body {
     top: 0;
     left: 0;
     opacity: 0.7;
-    /*background-color: black;*/
+    background-color: black;
     bottom: 0;
     right: 0;
 }
@@ -56,10 +54,20 @@ body {
     position: relative;
     margin: 0;
     height: 100%;
-    background: linear-gradient(steelblue, beige);
+    background-color: #2f3642 !important;
+    background: linear-gradient(0deg,rgba(8, 8, 8, 0.70),rgba(0, 0, 0, 0.45)),url(/bg.jpg);
+    background-position: center;
+    background-position-y: 0;
+    background-size: 100%;
+
+
+
     font-family: 'Lato', sans-serif;
     font-weight: 300;
     text-align: center;
+
+    background-repeat: no-repeat;
+
 }
 
 #loader {
@@ -70,6 +78,9 @@ body {
     z-index: 100;
 }
 
+form {
+    text-align: center;
+}
 .button {
 	background-color: #1c87c9;
 	border: none;
@@ -83,17 +94,10 @@ body {
 	cursor: pointer;
 	z-index: 100;
 	background: linear-gradient(to bottom, orange, orangered);
-	box-shadow: inset 0 2px 1px rgba(255,69,0,.2);
-	border-radius: 36px;
-
+box-shadow: inset 0 2px 1px rgba(255,69,0,.2);
+border-radius: 36px;
 	}
 
-.dialog-button:hover {
-    background: -webkit-gradient(linear,left top,left bottom,color-stop(1%,#c1ee00),color-stop(100%,#87ad1e));
-    background: -webkit-gradient(linear,left top,left bottom,from(#c1ee00),to(#87ad1e));
-    background: -webkit-linear-gradient(top,#c1ee00,#87ad1e);
-    background: linear-gradient(to bottom,#c1ee00,#87ad1e);
-}
 	.dialog-button {
   background-color: #1c87c9;
     border: none;
@@ -105,13 +109,11 @@ body {
     margin: 4px 2px;
     cursor: pointer;
     z-index: 100;
-    display:  block;
     margin: auto;
     background: linear-gradient(to bottom, orange, orangered);
     box-shadow: inset 0 2px 1px rgba(255,69,0,.2);
     border-radius: 5px;
-		    background: linear-gradient(to bottom,#b3dd00,#87ad1e);
-    background-color: #96c300;
+    min-width:  95px;
 }
 .button-container {
 	position: absolute;
@@ -119,8 +121,4 @@ top:70%; left:50%;
 height:200px; width:200px;
 margin-top:-100px; margin-left:-94px;
 z-index: 100;
-}
-
-.modal-header .close {
-  display:none;
 }
